@@ -1,17 +1,40 @@
 package com.example.myapplication.firstapp
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.myapplication.R
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatEditText
+import android.util.Log
+import android.content.Intent
 
 class FirtsAppActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_firts_app)
+        setContentView(R.layout.activity_firts_app);
+        val btnLogin = findViewById<AppCompatButton>(R.id.btnLogin);
+        val etUser = findViewById<AppCompatEditText>(R.id.etUser);
+        val etPassword = findViewById<AppCompatEditText>(R.id.etPassword);
 
+        btnLogin.setOnClickListener {
+            val user = etUser.text.toString()
+
+            if (user.isNotEmpty()) {
+                Log.i("Ray", "Usuario ingresado ${etUser.text}")
+
+            } else {
+                Log.i("Ray", "Ingrese usuario ${etUser.text}")
+            }
+
+            val password = etPassword.text.toString()
+
+            if (password.isNotEmpty()) {
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_PASSWORD", password)
+                startActivity(intent)
+            } else {
+                Log.i("Ray", "ingrese contraseña ${etPassword.text}")
+            }
         }
     }
+}
