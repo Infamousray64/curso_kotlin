@@ -10,8 +10,8 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
             val tvResult = findViewById<TextView>(R.id.tvResult)
-            val password: String = intent.extras?.getString("EXTRA_PASSWORD").orEmpty()
-            tvResult.text = "Hola $password"
+            val user: String = intent.extras?.getString("EXTRA_USER").orEmpty()
+            tvResult.text = "Hola $user"
 
         }
     }

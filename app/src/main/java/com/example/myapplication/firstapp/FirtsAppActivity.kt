@@ -20,7 +20,9 @@ class FirtsAppActivity : AppCompatActivity() {
             val user = etUser.text.toString()
 
             if (user.isNotEmpty()) {
-                Log.i("Ray", "Usuario ingresado ${etUser.text}")
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_USER", user)
+                startActivity(intent)
 
             } else {
                 Log.i("Ray", "Ingrese usuario ${etUser.text}")
@@ -29,9 +31,10 @@ class FirtsAppActivity : AppCompatActivity() {
             val password = etPassword.text.toString()
 
             if (password.isNotEmpty()) {
-                val intent = Intent(this, ResultActivity::class.java)
-                intent.putExtra("EXTRA_PASSWORD", password)
-                startActivity(intent)
+                Log.i("Ray", "Password ingresado ${etPassword.text}")
+
+
+
             } else {
                 Log.i("Ray", "ingrese contraseña ${etPassword.text}")
             }
