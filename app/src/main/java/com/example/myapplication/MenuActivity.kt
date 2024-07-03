@@ -1,4 +1,5 @@
 package com.example.myapplication
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -11,10 +12,16 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         val btnSaludo = findViewById<Button>(R.id.btnSaludo)
+        val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)
         btnSaludo.setOnClickListener { navigateToSaludo() }
-        }
+        btnIMCApp.setOnClickListener { navigateToIMCApp() }
+    }
 
-    fun navigateToSaludo() {
+    private fun navigateToIMCApp() {
+
+    }
+
+    private fun navigateToSaludo() {
         val intent = Intent(this, FirtsAppActivity::class.java)
         startActivity(intent)
     }

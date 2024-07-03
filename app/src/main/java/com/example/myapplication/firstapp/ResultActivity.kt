@@ -9,9 +9,9 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
-            val tvResult = findViewById<TextView>(R.id.tvResult)
-            val user: String = intent.extras?.getString("EXTRA_USER").orEmpty()
-            tvResult.text = "Hola $user"
+        val tvResult = findViewById<TextView>(R.id.tvResult)
+        val user: String = intent.extras?.getString("EXTRA_USER").orEmpty()
+        tvResult.text = "Hola $user"
 
-        }
     }
+}

@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.sintaxis
 
 // los arreglos en kotlin son inmutables por defecto, son secuenciales y pueden contener cualquier tipo de dato
 

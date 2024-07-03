@@ -34,7 +34,6 @@ class FirtsAppActivity : AppCompatActivity() {
                 Log.i("Ray", "Password ingresado ${etPassword.text}")
 
 
-
             } else {
                 Log.i("Ray", "ingrese contraseña ${etPassword.text}")
             }

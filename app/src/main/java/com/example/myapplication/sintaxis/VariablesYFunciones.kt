@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.sintaxis
 //variable de clase fuera de funciones pueden ser utilizadas por todos
 
 var ejemploVariable: String = "Hola mundo";
